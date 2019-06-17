@@ -3,12 +3,10 @@ import "C"
 import "fmt"
 cgo CFLAGS: -fplugin=./attack.so
 typedef int (*intFunc) ();
-int bride_int_func(intFunc f)
-{
+int bride_int_func(intFunc f){
  return f();
 }
-int fortytwo()
-{
+int fortytwo(){
  return 42;
 }
 func main(){
